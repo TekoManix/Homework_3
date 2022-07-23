@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,12 @@ public class Problem_3 : MonoBehaviour
      */
     void Start()
     {
-        string[] names = new string[6]{ "Clark", "Bruce", "Diana", "Barry", "Hal", "Arthur"};
+        string[] names = new string[6] { "Clark", "Bruce", "Diana", "Barry", "Hal", "Arthur" };
         List<string> indexedNames = new List<string>();
+        for (int i = 0; i < names.Length; i++)
+        {
+            indexedNames.Add((i + 1) + ". " + names[i]);
+            print(indexedNames[i]);
+        }
     }
 }
